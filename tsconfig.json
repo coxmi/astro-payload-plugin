@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+  	"rootDir": "./src",
+  	"outDir": "./dist",
+  	"strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "emitDeclarationOnly": true,
+    "declaration": true
+  }
+}
