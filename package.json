@@ -10,6 +10,7 @@
     "build": "node build.mjs & tsc"
   },
   "devDependencies": {
+  	"astro": "^3.0.10",
     "express": "^4.18.2",
     "payload": "^1.15.4",
     "typescript": "^5.2.2"
@@ -21,5 +22,20 @@
   },
   "dependencies": {
     "@types/express": "^4.17.17"
-  }
+  },
+  "description": "Payload CMS and Astro. Run both apps on the same server using the Payload local API. Works in Astro dev mode.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coxmi/astro-payload-plugin.git"
+  },
+  "keywords": [
+    "astro",
+    "payload",
+    "cms"
+  ],
+  "author": "Michael Cox",
+  "bugs": {
+    "url": "https://github.com/coxmi/astro-payload-plugin/issues"
+  },
+  "homepage": "https://github.com/coxmi/astro-payload-plugin#readme"
 }
