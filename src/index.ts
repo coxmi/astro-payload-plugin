@@ -32,7 +32,7 @@ export function payload({ builtConfigPath, init }: PayloadArgs): AstroIntegratio
 	let mode: string
 
 	return {
-		name: '@coxmi/astro-payload-plugin',
+		name: 'astro-payload-plugin',
 		hooks: {
 			'astro:config:setup'({ config, addWatchFile, command, updateConfig, logger }) {
 				mode = command
