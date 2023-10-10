@@ -9,21 +9,21 @@ import { astro } from 'astro-payload-plugin'
 const app = express()
 
 export async function getPayload() {
-	await payload.init({
-	    secret: PAYLOAD_SECRET,
-	    express: app,
-	})
-	return payload
+    await payload.init({
+        secret: PAYLOAD_SECRET,
+        express: app,
+    })
+    return payload
 }
 
 async function serve() {
-	await getPayload()
-	await astro({
-		express: app,
-		serverEntry: `path/to/astro/server/entry.mjs`,
-		clientDir: `path/to/astro/client`,
-	})
-	app.listen(1234)
+    await getPayload()
+    await astro({
+        express: app,
+        serverEntry: 'path/to/astro/server/entry.mjs',
+        clientDir: 'path/to/astro/client',
+    })
+    app.listen(1234)
 }
 ```
 
@@ -36,18 +36,18 @@ import { payload } from 'astro-payload-plugin'
 import { getPayload } from './server.ts'
 
 export default defineConfig({
-	integrations: [
-		payload({
-			builtConfigPath: 'absolute/path/to/payload.config.cjs',
-			// pass payload instance to init
-			init: getPayload
-		})
-	],
-	output: 'hybrid',
-	// must use node middleware
-	adapter: node({
-		mode: "middleware"
-	})
+    integrations: [
+        payload({
+            builtConfigPath: 'absolute/path/to/payload.config.cjs',
+            // pass payload instance to init
+            init: getPayload
+        })
+    ],
+    output: 'hybrid',
+    // must use node middleware
+    adapter: node({
+        mode: 'middleware'
+    })
 })
 
 ```
